@@ -13,17 +13,17 @@ export default function DesktopNav({
 }) {
   const controls = useAnimation();
 
-  const linksVariants = {
-    hidden: {
-      x: "100vw",
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { delay: 0.2, duration: 0.5, type: "tween" },
-    },
-  };
+  // const linksVariants = {
+  //   hidden: {
+  //     x: "100vw",
+  //     opacity: 0,
+  //   },
+  //   visible: {
+  //     x: 0,
+  //     opacity: 1,
+  //     transition: { delay: 0.2, duration: 0.5, type: "tween" },
+  //   },
+  // };
 
   useEffect(() => {
     if (items.length === 0) {
@@ -39,10 +39,10 @@ export default function DesktopNav({
   return (
     <div className="hidden md:flex md:pr-6">
       {session ? (
-        <motion.div
-          variants={linksVariants}
-          initial="hidden"
-          animate="visible"
+        <div
+          // variants={linksVariants}
+          // initial="hidden"
+          // animate="visible"
           className="flex justify-center items-center gap-8"
         >
           <Link
@@ -108,7 +108,7 @@ export default function DesktopNav({
               </li>
             </ul>
           </div>
-        </motion.div>
+        </div>
       ) : (
         <>
           <button

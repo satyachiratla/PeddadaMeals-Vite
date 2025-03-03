@@ -98,9 +98,9 @@ export default function MealItem({
                 max="5"
                 step="1"
                 defaultValue={1}
-                className="border-2 border-gray-300 text-black rounded w-12 pl-2"
+                className="border-2 border-gray-300 text-black bg-white rounded w-12 pl-2"
               />
-              <button type="submit" className="black_btn">
+              <button type="submit" className="btn btn-info">
                 Add to Cart
               </button>
               {!amountIsValid && <p>Please enter a valid amount(1-5)</p>}

@@ -32,6 +32,7 @@ export default function MobileNav({
           )}
           {toggle && (
             <div className="custom_dropdown">
+              <Link to="/profile">Profile</Link>
               <Link
                 to="/cart"
                 className="dropdown_link"
@@ -42,6 +43,7 @@ export default function MobileNav({
                   {items.length}
                 </span>
               </Link>
+              <Link to="/addresses">Addresses</Link>
               <Link
                 to="/orders"
                 className="custom_dropdown_link"

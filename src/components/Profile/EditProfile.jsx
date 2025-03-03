@@ -153,7 +153,7 @@ export default function EditProfile() {
           <label className="input input-bordered flex items-center gap-2">
             Date of Birth
             <input
-              type="text"
+              type="date"
               className="grow"
               name="dob"
               placeholder="DD/MM/YY"

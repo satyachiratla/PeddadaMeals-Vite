@@ -7,6 +7,7 @@ import {
 
 import CartItem from "./CartItem";
 import ChooseAddress from "./ChooseAddress";
+import AddressForm from "../Addresses/AddressForm";
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -84,6 +85,7 @@ export default function Cart() {
 
   return (
     <>
+      <AddressForm />
       <motion.div
         variants={cartVariants}
         initial="hidden"
