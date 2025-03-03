@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router";
 
@@ -17,19 +17,21 @@ export default function NavBar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  console.log("====NAVBAR RENDERING----");
+
   const items = useSelector((state) => state.cart.items);
 
-  const navVariants = {
-    hidden: {
-      x: "-100vw",
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { delay: 0.2, duration: 0.3, type: "tween" },
-    },
-  };
+  // const navVariants = {
+  //   hidden: {
+  //     x: "-100vw",
+  //     opacity: 0,
+  //   },
+  //   visible: {
+  //     x: 0,
+  //     opacity: 1,
+  //     transition: { delay: 0.2, duration: 0.3, type: "tween" },
+  //   },
+  // };
 
   const toggleHandler = () => {
     setToggle(false);
@@ -44,10 +46,10 @@ export default function NavBar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full backdrop-blur flex justify-between items-center py-6 px-6 mx-auto border-b border-gray-300/75">
       <Link to="/">
-        <motion.div
-          variants={navVariants}
-          initial="hidden"
-          animate="visible"
+        <div
+          // variants={navVariants}
+          // initial="hidden"
+          // animate="visible"
           className="flex justify-center items-center gap-3 md:gap-4"
         >
           <img
@@ -60,7 +62,7 @@ export default function NavBar() {
           <p className="text-xl orange_gradient font-bold tracking-wider md:text-2xl">
             Peddada Meals
           </p>
-        </motion.div>
+        </div>
       </Link>
 
       {/* <-- Mobile Navigation --> */}
